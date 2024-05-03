@@ -1,59 +1,36 @@
-<script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+<script lang="ts">
+	import { goto } from '$app/navigation';
+	import { LocalFileSystemAdapter } from '$lib/utils/filesystem.svelte';
+	import { store } from '$lib/utils/store.svelte';
+	async function selectDirectory() {
+		try {
+			store.localFileSystemDirectory = await window.showDirectoryPicker({ mode: 'read' });
+			store.universalDirectory = await LocalFileSystemAdapter(store.localFileSystemDirectory);
+			goto('/view');
+		} catch (error) {
+			throw error;
+		}
+	}
 </script>
 
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
+<div class="content">
+	<div class="mdui-prose">
+		<h1>Hepth</h1>
+		<mdui-button role="button" tabindex="0" onkeydown={() => {}} onclick={selectDirectory}>
+			Select Folder
+		</mdui-button>
+	</div>
+</div>
 
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
+<style lang="postcss">
+	.content {
+		@apply flex h-full w-full flex-col items-center justify-center text-center;
 	}
-
 	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+		font-stretch: 150%;
+		font-variation-settings:
+			'YTDE' -250,
+			'YOPQ' 25;
+		@apply text-6xl font-semibold;
 	}
 </style>
