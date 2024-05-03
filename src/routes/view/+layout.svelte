@@ -25,7 +25,7 @@
 		@apply relative flex h-full w-full flex-col;
 	}
 	.sub-content {
-		@apply h-full w-full overflow-scroll;
+		@apply h-full w-full;
 	}
 	mdui-bottom-app-bar {
 		@apply absolute bottom-0 w-full;

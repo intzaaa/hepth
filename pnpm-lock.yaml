@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      flexmasonry:
+        specifier: ^0.2.3
+        version: 0.2.3
     devDependencies:
       '@babel/core':
         specifier: ^7.24.5
@@ -44,6 +48,9 @@ importers:
       '@tailwindcss/typography':
         specifier: ^0.5.10
         version: 0.5.13(tailwindcss@3.4.3)
+      '@types/bricks.js':
+        specifier: ^1.8.5
+        version: 1.8.5
       '@types/eslint':
         specifier: ^8.56.0
         version: 8.56.10
@@ -65,6 +72,9 @@ importers:
       autoprefixer:
         specifier: ^10.4.16
         version: 10.4.19(postcss@8.4.38)
+      bricks.js:
+        specifier: ^1.8.0
+        version: 1.8.0
       detect-browser:
         specifier: ^5.3.0
         version: 5.3.0
@@ -1111,6 +1121,9 @@ packages:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
     engines: {node: '>= 10'}
 
+  '@types/bricks.js@1.8.5':
+    resolution: {integrity: sha512-aGMad7jPP6DEKzMJUsoeKswE/HVYEjYAjfI76WSHIS8lFR6vl5ADrDJLBSTiHT0871/qpk+yT59p7simle1+3w==}
+
   '@types/cookie@0.6.0':
     resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}
 
@@ -1360,6 +1373,9 @@ packages:
   braces@3.0.2:
     resolution: {integrity: sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==}
     engines: {node: '>=8'}
+
+  bricks.js@1.8.0:
+    resolution: {integrity: sha512-XJsIGxoixpMDo/KoLXR+uQizFVGWNAQy1lLoIwXKxm6/Zpd9QQLSUd0otybbK7wjqX23ZvCXFxnIw+uCXJHo0A==}
 
   browser-process-hrtime@1.0.0:
     resolution: {integrity: sha512-9o5UecI3GhkpM6DrXr69PblIuWxPKk9Y0jHBRhdocZ2y7YECBFCsHm79Pr3OyR2AvjhDkabFJaDJMYRazHgsow==}
@@ -1708,6 +1724,9 @@ packages:
   flatted@3.3.1:
     resolution: {integrity: sha512-X8cqMLLie7KsNUDSdzeN8FYK9rEt4Dt67OsG/DNGnYTSDBG4uFAJFBnUeiV+zCVAvwFy56IjM9sH51jVaEhNxw==}
 
+  flexmasonry@0.2.3:
+    resolution: {integrity: sha512-1Id/Ssa7+1sZvll2iyqPxamRmnp15omzWpwWVsK/wuC+ATcGHtxHlgI2MJGDF110jG1QWZN1vMHZOngEuzi/HQ==}
+
   foreground-child@3.1.1:
     resolution: {integrity: sha512-TMKDUnIte6bfb5nWv7V/caI169OHgvwjb7V4WkeUvbQQdjr5rWKqHFiKWb/fcOwB+CzBT+qbWjvj+DVwRskpIg==}
     engines: {node: '>=14'}
@@ -1949,6 +1968,9 @@ packages:
   kleur@4.1.5:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
+
+  knot.js@1.1.5:
+    resolution: {integrity: sha512-ptGtvTrgLNtQj9ilUR+tSyHWTCPp2xu/EHkeo3OvpczzNqBSwjQKz8G7vUhzlRbasXVULBWSejsj6QRQb1pakw==}
 
   known-css-properties@0.30.0:
     resolution: {integrity: sha512-VSWXYUnsPu9+WYKkfmJyLKtIvaRJi1kXUqVmBACORXZQxT5oZDsoZ2vQP+bQFDnWtpI/4eq3MLoRMjI2fnLzTQ==}
@@ -4028,6 +4050,8 @@ snapshots:
   '@tootallnate/once@2.0.0':
     optional: true
 
+  '@types/bricks.js@1.8.5': {}
+
   '@types/cookie@0.6.0': {}
 
   '@types/eslint@8.56.10':
@@ -4313,6 +4337,10 @@ snapshots:
   braces@3.0.2:
     dependencies:
       fill-range: 7.0.1
+
+  bricks.js@1.8.0:
+    dependencies:
+      knot.js: 1.1.5
 
   browser-process-hrtime@1.0.0:
     optional: true
@@ -4729,6 +4757,8 @@ snapshots:
 
   flatted@3.3.1: {}
 
+  flexmasonry@0.2.3: {}
+
   foreground-child@3.1.1:
     dependencies:
       cross-spawn: 7.0.3
@@ -4986,6 +5016,8 @@ snapshots:
       json-buffer: 3.0.1
 
   kleur@4.1.5: {}
+
+  knot.js@1.1.5: {}
 
   known-css-properties@0.30.0: {}
 

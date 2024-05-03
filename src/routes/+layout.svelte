@@ -11,6 +11,10 @@
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 	import { dev } from '$app/environment';
+	import { store } from '$lib/utils/store.svelte';
+	$effect(() => {
+		if (store.universalDirectory === undefined && $page.url.pathname !== '/') goto('/');
+	});
 	onMount(() => {
 		{
 			const browser = detect(navigator.userAgent);
@@ -60,6 +64,9 @@
 </div>
 
 <style lang="postcss">
+	:global(*) {
+		@apply box-border;
+	}
 	:global(body) {
 		height: 100vh; /* For browsers that don't support CSS variables */
 		height: calc(var(--1dvh, 1vh) * 100); /* This is the "polyfill" */
@@ -71,5 +78,8 @@
 	}
 	.content {
 		@apply h-full w-full;
+	}
+	mdui-navigation-rail {
+		@apply z-[9999];
 	}
 </style>

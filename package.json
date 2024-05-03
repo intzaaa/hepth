@@ -26,6 +26,7 @@
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@tailwindcss/typography": "^0.5.10",
+		"@types/bricks.js": "^1.8.5",
 		"@types/eslint": "^8.56.0",
 		"@types/fabric": "^5.3.7",
 		"@types/path-browserify": "^1.0.2",
@@ -33,6 +34,7 @@
 		"@typescript-eslint/eslint-plugin": "^7.0.0",
 		"@typescript-eslint/parser": "^7.0.0",
 		"autoprefixer": "^10.4.16",
+		"bricks.js": "^1.8.0",
 		"detect-browser": "^5.3.0",
 		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
@@ -56,5 +58,8 @@
 		"vite": "^5.0.3",
 		"vitest": "^1.2.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"flexmasonry": "^0.2.3"
+	}
 }
